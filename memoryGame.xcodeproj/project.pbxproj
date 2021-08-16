@@ -13,6 +13,7 @@
 		255D5D6E26C17E0B0072CCDB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 255D5D6C26C17E0B0072CCDB /* Main.storyboard */; };
 		255D5D7026C17E0C0072CCDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 255D5D6F26C17E0C0072CCDB /* Assets.xcassets */; };
 		255D5D7326C17E0C0072CCDB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 255D5D7126C17E0C0072CCDB /* LaunchScreen.storyboard */; };
+		255D5D7B26C2BE160072CCDB /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255D5D7A26C2BE160072CCDB /* Card.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		255D5D6F26C17E0C0072CCDB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		255D5D7226C17E0C0072CCDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		255D5D7426C17E0C0072CCDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		255D5D7A26C2BE160072CCDB /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				255D5D6626C17E0B0072CCDB /* AppDelegate.swift */,
 				255D5D6826C17E0B0072CCDB /* SceneDelegate.swift */,
 				255D5D6A26C17E0B0072CCDB /* ViewController.swift */,
+				255D5D7A26C2BE160072CCDB /* Card.swift */,
 				255D5D6C26C17E0B0072CCDB /* Main.storyboard */,
 				255D5D6F26C17E0C0072CCDB /* Assets.xcassets */,
 				255D5D7126C17E0C0072CCDB /* LaunchScreen.storyboard */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				255D5D6B26C17E0B0072CCDB /* ViewController.swift in Sources */,
+				255D5D7B26C2BE160072CCDB /* Card.swift in Sources */,
 				255D5D6726C17E0B0072CCDB /* AppDelegate.swift in Sources */,
 				255D5D6926C17E0B0072CCDB /* SceneDelegate.swift in Sources */,
 			);

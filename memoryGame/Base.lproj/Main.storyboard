@@ -1,24 +1,307 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19115.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19107.4"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="memoryGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="1b3-hu-0bG">
+                                <rect key="frame" x="32" y="70" width="350" height="756"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="紙牌記憶遊戲" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SeH-ky-dQN">
+                                        <rect key="frame" x="48" y="0.0" width="254" height="50.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="xCk-Vf-DLe">
+                                        <rect key="frame" x="10" y="69.5" width="330" height="192.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="mOQ-mI-xBU">
+                                                <rect key="frame" x="0.0" y="0.0" width="140" height="192.5"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dv2-K2-tp0">
+                                                        <rect key="frame" x="0.0" y="0.0" width="140" height="141"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q0f-aH-3qz">
+                                                                <rect key="frame" x="0.0" y="0.0" width="140" height="141"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="62"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <color key="backgroundColor" red="0.65503485814409168" green="0.84929660031102072" blue="0.96620899438858032" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    </view>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="時間" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Lt-9K-Z2s">
+                                                        <rect key="frame" x="37.5" y="154" width="65" height="38.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="8Lt-9K-Z2s" firstAttribute="leading" secondItem="mOQ-mI-xBU" secondAttribute="leading" constant="37.5" id="09h-Oh-lhV"/>
+                                                    <constraint firstItem="dv2-K2-tp0" firstAttribute="leading" secondItem="mOQ-mI-xBU" secondAttribute="leadingMargin" id="Plu-Zz-Mia"/>
+                                                    <constraint firstItem="dv2-K2-tp0" firstAttribute="top" secondItem="mOQ-mI-xBU" secondAttribute="top" id="o8x-sw-FoL"/>
+                                                    <constraint firstItem="8Lt-9K-Z2s" firstAttribute="centerX" secondItem="mOQ-mI-xBU" secondAttribute="centerX" id="sfd-2F-y4a"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="O3K-3a-mz9">
+                                                <rect key="frame" x="190" y="0.0" width="140" height="192.5"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hnf-yS-cza">
+                                                        <rect key="frame" x="0.0" y="0.0" width="140" height="141"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hJ4-xt-jKn">
+                                                                <rect key="frame" x="0.0" y="0.0" width="140" height="141"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="62"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                                    </view>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="分數" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Qb-ow-QQc">
+                                                        <rect key="frame" x="37.5" y="154" width="65" height="38.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="4Qb-ow-QQc" firstAttribute="top" secondItem="hnf-yS-cza" secondAttribute="bottom" constant="13" id="5gB-h0-IAg"/>
+                                                    <constraint firstItem="hnf-yS-cza" firstAttribute="leading" secondItem="O3K-3a-mz9" secondAttribute="leadingMargin" id="aiy-ik-NbW"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="JSa-6Y-uxW">
+                                        <rect key="frame" x="0.0" y="281" width="350" height="475"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="4Sd-S0-5ic">
+                                                <rect key="frame" x="0.0" y="0.0" width="350" height="100"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JCb-4b-9bl">
+                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                        <color key="backgroundColor" red="0.85098039219999999" green="0.84923454279999999" blue="0.84923454279999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="100" id="KTg-nS-pHg"/>
+                                                            <constraint firstAttribute="width" constant="100" id="gRf-or-qR7"/>
+                                                        </constraints>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <connections>
+                                                            <action selector="flipCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k5k-A5-Mh0"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AC6-XK-6fQ">
+                                                        <rect key="frame" x="125" y="0.0" width="100" height="100"/>
+                                                        <color key="backgroundColor" red="0.85098039219999999" green="0.84923454279999999" blue="0.84923454279999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="100" id="pfb-5H-jO1"/>
+                                                            <constraint firstAttribute="height" constant="100" id="yda-fE-IeH"/>
+                                                        </constraints>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <connections>
+                                                            <action selector="flipCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a3d-EB-6h8"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KGZ-ow-8Je">
+                                                        <rect key="frame" x="250" y="0.0" width="100" height="100"/>
+                                                        <color key="backgroundColor" red="0.85098039219999999" green="0.84923454279999999" blue="0.84923454279999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="100" id="Xnc-EZ-gDm"/>
+                                                            <constraint firstAttribute="width" constant="100" id="lZ0-89-Jmq"/>
+                                                        </constraints>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <connections>
+                                                            <action selector="flipCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="868-Te-O0R"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="2oW-Xw-gHt">
+                                                <rect key="frame" x="0.0" y="125" width="350" height="100"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xAB-O8-xmS">
+                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                        <color key="backgroundColor" red="0.85098039219999999" green="0.84923454279999999" blue="0.84923454279999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="100" id="Evg-YW-AKW"/>
+                                                            <constraint firstAttribute="height" constant="100" id="Jmx-ac-nYl"/>
+                                                        </constraints>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <connections>
+                                                            <action selector="flipCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="So0-Tx-d78"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0nz-Qh-6PT">
+                                                        <rect key="frame" x="125" y="0.0" width="100" height="100"/>
+                                                        <color key="backgroundColor" red="0.85098039219999999" green="0.84923454279999999" blue="0.84923454279999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="100" id="oJa-LN-Bfv"/>
+                                                            <constraint firstAttribute="height" constant="100" id="tKJ-IZ-hez"/>
+                                                        </constraints>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <connections>
+                                                            <action selector="flipCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ucY-6N-g17"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WH7-1V-zbO">
+                                                        <rect key="frame" x="250" y="0.0" width="100" height="100"/>
+                                                        <color key="backgroundColor" red="0.85098039219999999" green="0.84923454279999999" blue="0.84923454279999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="100" id="BTf-AB-qSo"/>
+                                                            <constraint firstAttribute="height" constant="100" id="tk0-Ha-lh5"/>
+                                                        </constraints>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <connections>
+                                                            <action selector="flipCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2cA-OS-Obw"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="yKe-pd-w2J">
+                                                <rect key="frame" x="0.0" y="250" width="350" height="100"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uab-Sc-9aV">
+                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                        <color key="backgroundColor" red="0.85098039219999999" green="0.84923454279999999" blue="0.84923454279999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="100" id="89P-l9-qnG"/>
+                                                            <constraint firstAttribute="width" constant="100" id="Dpb-aa-AXf"/>
+                                                        </constraints>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <connections>
+                                                            <action selector="flipCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Q8-9v-ldu"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R3Y-Q3-h2D">
+                                                        <rect key="frame" x="125" y="0.0" width="100" height="100"/>
+                                                        <color key="backgroundColor" red="0.85098039219999999" green="0.84923454279999999" blue="0.84923454279999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="100" id="6nw-2y-hIO"/>
+                                                            <constraint firstAttribute="height" constant="100" id="gUA-EZ-9Oq"/>
+                                                        </constraints>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <connections>
+                                                            <action selector="flipCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h5X-aQ-vwO"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="flH-JK-CWW">
+                                                        <rect key="frame" x="250" y="0.0" width="100" height="100"/>
+                                                        <color key="backgroundColor" red="0.85098039219999999" green="0.84923454279999999" blue="0.84923454279999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="100" id="SrT-pe-0QZ"/>
+                                                            <constraint firstAttribute="height" constant="100" id="Uph-aB-fJq"/>
+                                                        </constraints>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <connections>
+                                                            <action selector="flipCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IY9-Wh-7zk"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="mNJ-eO-oVh">
+                                                <rect key="frame" x="0.0" y="375" width="350" height="100"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vqj-9B-xtu">
+                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                        <color key="backgroundColor" red="0.85098039219999999" green="0.84923454279999999" blue="0.84923454279999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="100" id="0pe-j8-N41"/>
+                                                            <constraint firstAttribute="width" constant="100" id="fqi-C9-Hgi"/>
+                                                        </constraints>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <connections>
+                                                            <action selector="flipCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ESF-2m-IbX"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X9T-0c-Y3I">
+                                                        <rect key="frame" x="125" y="0.0" width="100" height="100"/>
+                                                        <color key="backgroundColor" red="0.85098039219999999" green="0.84923454279999999" blue="0.84923454279999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="100" id="Kw9-a3-39d"/>
+                                                            <constraint firstAttribute="height" constant="100" id="oOo-YR-0Xe"/>
+                                                        </constraints>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <connections>
+                                                            <action selector="flipCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UvK-38-8gf"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ykR-a1-qFS">
+                                                        <rect key="frame" x="250" y="0.0" width="100" height="100"/>
+                                                        <color key="backgroundColor" red="0.85098039219999999" green="0.84923454279999999" blue="0.84923454279999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="100" id="MEG-V9-8Xl"/>
+                                                            <constraint firstAttribute="height" constant="100" id="z9x-YN-PME"/>
+                                                        </constraints>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <connections>
+                                                            <action selector="flipCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kvR-BU-jad"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="JSa-6Y-uxW" firstAttribute="top" secondItem="xCk-Vf-DLe" secondAttribute="bottom" constant="19" id="sXN-3i-qIL"/>
+                                    <constraint firstItem="JSa-6Y-uxW" firstAttribute="top" secondItem="xCk-Vf-DLe" secondAttribute="bottom" constant="19" id="wz8-zq-Pn5"/>
+                                    <constraint firstItem="xCk-Vf-DLe" firstAttribute="leading" secondItem="1b3-hu-0bG" secondAttribute="leading" constant="10" id="xeJ-Nk-dfY"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1b3-hu-0bG" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Fa6-w3-LIZ"/>
+                            <constraint firstItem="1b3-hu-0bG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="26" id="SHf-1v-tLF"/>
+                            <constraint firstItem="1b3-hu-0bG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SRD-vU-dSA"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="countDownLabel" destination="Q0f-aH-3qz" id="kBX-TQ-LAf"/>
+                        <outlet property="pairLabel" destination="hJ4-xt-jKn" id="CwK-CD-b4t"/>
+                        <outlet property="timeView" destination="dv2-K2-tp0" id="ZH9-1Z-1J2"/>
+                        <outletCollection property="cardBtns" destination="JCb-4b-9bl" collectionClass="NSMutableArray" id="pSc-8I-g9y"/>
+                        <outletCollection property="cardBtns" destination="AC6-XK-6fQ" collectionClass="NSMutableArray" id="ca2-pu-Mc2"/>
+                        <outletCollection property="cardBtns" destination="KGZ-ow-8Je" collectionClass="NSMutableArray" id="tQ4-Tp-SAO"/>
+                        <outletCollection property="cardBtns" destination="xAB-O8-xmS" collectionClass="NSMutableArray" id="ts0-wb-Bn3"/>
+                        <outletCollection property="cardBtns" destination="0nz-Qh-6PT" collectionClass="NSMutableArray" id="GY2-os-tth"/>
+                        <outletCollection property="cardBtns" destination="WH7-1V-zbO" collectionClass="NSMutableArray" id="bfi-ac-y4S"/>
+                        <outletCollection property="cardBtns" destination="Uab-Sc-9aV" collectionClass="NSMutableArray" id="BWj-5x-Szr"/>
+                        <outletCollection property="cardBtns" destination="R3Y-Q3-h2D" collectionClass="NSMutableArray" id="Uy5-t7-1ba"/>
+                        <outletCollection property="cardBtns" destination="flH-JK-CWW" collectionClass="NSMutableArray" id="17k-A2-Luv"/>
+                        <outletCollection property="cardBtns" destination="vqj-9B-xtu" collectionClass="NSMutableArray" id="CoA-LZ-c8J"/>
+                        <outletCollection property="cardBtns" destination="X9T-0c-Y3I" collectionClass="NSMutableArray" id="Tit-3l-tU6"/>
+                        <outletCollection property="cardBtns" destination="ykR-a1-qFS" collectionClass="NSMutableArray" id="FIj-Bd-cIn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="97.767857142857139"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
